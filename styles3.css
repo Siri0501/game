@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* Light blue background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#gameArea {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #fff3e0; /* Light orange background for the game area */
+    border: 2px solid #ffab40; /* Orange border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure insects don't overflow out of the game area */
+}
+
+.insect {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('insect.png'); /* Use an image of an insect */
+    background-size: cover;
+    cursor: pointer; /* Change cursor to pointer when hovering over the insect */
+    transition: transform 0.2s ease; /* Smooth transition for scaling */
+}
+
+.insect:active {
+    transform: scale(1.2); /* Scale up the insect when clicked */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6f00; /* Orange color for the score */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
